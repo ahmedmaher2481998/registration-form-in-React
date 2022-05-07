@@ -94,6 +94,54 @@ const FormApp = () => {
 					</div>
 				</fieldset>
 			</div>
+			<div className='mt-2'>
+				<label htmlFor='bio ' className='mylabel'>
+					Bio:
+				</label>
+				<textarea
+					name='bio'
+					id='bio'
+					cols='40'
+					value={bio}
+					rows='5'
+					className='border-2 border-slate-500 rounded-2xl bg-slate-200 focus:bg-white focus:ring-2 focus:ring-ingigo-500'
+					onChange={(e) => setBio(e.target.value)}
+				></textarea>
+			</div>
+			<div className='mt-2 felx items-center '>
+				<input
+					type='checkbox'
+					className='rounded-md w-6 h-6 border border-gray-200 '
+					name='agre'
+					id='agree'
+				/>
+				<label className='m-2 mylabel' htmlFor='agree'>
+					Sing up fro{" "}
+					<span className='text-red-500'>
+						<a href='/' onClick={(e) => e.preventDefault()}>
+							Notification .
+						</a>
+					</span>
+				</label>
+			</div>
+			<select className='mt-2 text-center myinput' name='pt' id='pt'>
+				<option selected disabled>
+					Chose phone Type
+				</option>
+				<option value='home'>home</option>
+				<option value='work'>work</option>
+				<option value='cellPhone'>cellPhone</option>
+			</select>
+			<div className='mt-2'>
+				<input
+					className='bg-indigo-600 border-2 border-gray-900 py-2 px-6 rounded-2xl m-2 text-white hover:bg-indigo-400 hover:text-black '
+					type='submit'
+				/>
+				<input
+					className='bg-indigo-600 border-2 border-gray-900 py-2 px-6 rounded-2xl m-2 text-white hover:bg-indigo-400 hover:text-black '
+					type='reset'
+				/>
+			</div>
 		</form>
 	);
 };
